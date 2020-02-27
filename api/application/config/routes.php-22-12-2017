@@ -1,0 +1,173 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/*
+| -------------------------------------------------------------------------
+| URI ROUTING
+| -------------------------------------------------------------------------
+| This file lets you re-map URI requests to specific controller functions.
+|
+| Typically there is a one-to-one relationship between a URL string
+| and its corresponding controller class/method. The segments in a
+| URL normally follow this pattern:
+|
+|	example.com/class/method/id/
+|
+| In some instances, however, you may want to remap this relationship
+| so that a different class/function is called than the one
+| corresponding to the URL.
+|
+| Please see the user guide for complete details:
+|
+|	http://codeigniter.com/user_guide/general/routing.html
+|
+| -------------------------------------------------------------------------
+| RESERVED ROUTES
+| -------------------------------------------------------------------------
+|
+| There area two reserved routes:
+|
+|	$route['default_controller'] = 'welcome';
+|
+| This route indicates which controller class should be loaded if the
+| URI contains no data. In the above example, the "welcome" class
+| would be loaded.
+|
+|	$route['404_override'] = 'errors/page_missing';
+|
+| This route will tell the Router what URI segments to use if those provided
+| in the URL cannot be matched to a valid route.
+|
+*/
+
+$route['default_controller'] = "welcome";
+$route['404_override'] = '';
+
+
+
+/*##################  FRONT ROUTES STARTS ####################*/
+
+$route['category/(:any)']                                = 'welcome/category/$1';
+$route['sub-category/(:any)/(:any)']                     = 'welcome/subcategory/$1/$2';
+$route['sub-sub-category/(:any)/(:any)/(:any)']          = 'welcome/subsubcategory/$1/$2/$3';
+$route['brand/(:any)']                                   = 'welcome/brand/$1';
+
+
+$route['category-services/(:any)']                       = 'welcome/categorySer/$1';
+$route['sub-category-services/(:any)/(:any)']            = 'welcome/subcategorySer/$1/$2';
+$route['sub-sub-category-services/(:any)/(:any)/(:any)'] = 'welcome/subsubcategorySer/$1/$2/$3';
+
+$route['product/(:any)']                                 = 'welcome/productDetail/$1';
+$route['service/(:any)']                                 = 'welcome/productDetail/$1';
+
+
+$route['cart']                                           = 'welcome/proCart';
+$route['checkout']                                       = 'welcome/checkout';
+$route['thankyou']                                       = 'welcome/thankyou';
+$route['payment']                                        = 'welcome/payment';
+$route['failure']                                        = 'welcome/failure';
+$route['success']                                        = 'welcome/success';
+$route['sign-in']                                        = 'welcome/userAuth';
+$route['sign-up']                                        = 'welcome/userAuth';
+$route['forgetpassword']                                 = 'welcome/forgetpassword';
+$route['forgetotp']                                      = 'welcome/forgetotp';
+$route['setnewpassword']                                 = 'welcome/setnewpassword';
+$route['sign-out']                                       = 'welcome/signOut';
+$route['bookappointment']                                = 'welcome/bookappointment';
+
+$route['career']                                       = 'welcome/career';
+$route['about']                                       = 'welcome/about';
+$route['contact']                                     = 'welcome/contact';
+$route['search']                                         = 'welcome/search';
+
+$route['terms']                                      = 'welcome/terms';
+$route['policy']                                     = 'welcome/policy';
+$route['newsletter']                                 = 'welcome/newsletter';
+$route['my-orders']                                  = 'accounts/MyOrders';
+$route['my-account']                                 = 'accounts/MyAccount';
+
+$route['trackorder']                                 = 'welcome/trackorder';
+/*##################  FRONT ROUTES ENDS ####################*/
+
+
+
+
+
+
+/*##################  ADMIN ROUTES STARTS ####################*/
+
+$route['admin']                          = 'admin/index';
+$route['admin/dashboard']                = 'adminuser/index';
+
+
+       /*  category Route Starts */
+	   
+$route['admin/category']                 = 'adminuser/category';
+$route['admin/manage-category']          = 'adminuser/add_category';
+$route['admin/delete_category']          = 'adminuser/delete_category';
+$route['admin/toggle_category_status']   = 'adminuser/toggle_category_status';
+$route['admin/edit-category/(:any)']     = 'adminuser/category/$1';
+
+      /*  category Route Ends */
+	  
+	  
+	  /*  sub category Route Starts */
+	   
+$route['admin/sub_category']             = 'adminuser/sub_category';
+$route['admin/manage-subcategory']       = 'adminuser/add_sub_category';
+$route['admin/delete_subcategory']       = 'adminuser/delete_subcategory';
+$route['admin/toggle_subcategory_status']= 'adminuser/toggle_subcategory_status';
+$route['admin/edit-subcategory/(:any)']  = 'adminuser/sub_category/$1';
+
+      /*  sub category Route Ends */
+	  
+ /*  sub category Route Starts */
+	   
+$route['admin/sub_sub_category']         = 'adminuser/sub_sub_category';
+$route['admin/manage-subcategory']       = 'adminuser/add_sub_category';
+$route['admin/delete_subcategory']       = 'adminuser/delete_subcategory';
+$route['admin/toggle_subcategory_status']= 'adminuser/toggle_subcategory_status';
+$route['admin/edit-subsubcategory/(:any)']  = 'adminuser/edit_sub_category/$1';
+$route['admin/upd_sub_category']         = 'adminuser/upd_sub_category';
+$route['admin/editsubcatogory']         = 'adminuser/editsubcatogory';
+
+$route['admin/brands']         = 'adminuser/brands';
+$route['admin/addbrands']      = 'adminuser/addbrands';
+$route['admin/edit-brands/(:any)']  = 'adminuser/editbrands/$1';
+$route['admin/updatebrands']         = 'adminuser/updatebrands';
+
+      /*  sub category Route Ends */	  
+
+$route['admin/products']         = 'adminuser/products';
+$route['admin/addproducts']      = 'adminuser/addproducts';
+$route['admin/editproducts/(:any)'] = 'adminuser/editproducts/$1';
+$route['admin/updateproducts']      = 'adminuser/updateproducts';
+$route['admin/viewgallery/(:any)']  = 'adminuser/viewgallery/$1';
+$route['admin/addgallery/(:any)']   = 'adminuser/addgallery/$1';
+$route['admin/slider']   = 'adminuser/slider';
+$route['admin/edit-slider/(:any)']   = 'adminuser/editslider/$1';
+
+$route['admin/product_attribute/(:any)']       = 'adminuser/product_attribute/$1';
+$route['admin/add_attribute']                  = 'adminuser/addproducts_attribute';
+$route['admin/editproduct_attribute/(:any)']   = 'adminuser/editproduct_attribute/$1';
+$route['admin/update_attribute']               = 'adminuser/updateproducts_attribute';
+
+$route['admin/addproduct_price/(:any)']       = 'adminuser/addproduct_price/$1';
+
+  /*  Employee Routes */	
+
+$route['admin/employee']                   = 'admin/employee';
+$route['admin/add-employee']               = 'admin/addEmployee';
+$route['admin/edit-employee/(:any)']      = 'admin/editEmployee/$1'; 
+
+
+ /*  Orders Routes */	
+
+ $route['admin/order_products']    = 'admin/orderProducts';
+ $route['admin/order_service']     = 'admin/orderService';
+ 
+/*##################  ADMIN ROUTES ENDS ####################*/
+
+
+
+
+/* End of file routes.php */
+/* Location: ./application/config/routes.php */

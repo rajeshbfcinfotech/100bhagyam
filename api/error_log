@@ -1,0 +1,10 @@
+[04-Nov-2017 13:38:47 Asia/Calcutta] PHP Fatal error:  Class 'Admin_model' not found in /home/compadd/public_html/projects/salonline/system/core/Loader.php on line 304
+[04-Nov-2017 13:51:44 Asia/Calcutta] PHP Fatal error:  Call to a member function initialize() on null in /home/compadd/public_html/projects/salonline/application/controllers/welcome.php on line 47
+[04-Nov-2017 13:51:55 Asia/Calcutta] PHP Fatal error:  Call to a member function initialize() on null in /home/compadd/public_html/projects/salonline/application/controllers/welcome.php on line 47
+[24-Nov-2017 13:23:22 Asia/Calcutta] PHP Fatal error:  Call to a member function insertData() on null in /home/compadd/public_html/projects/salonline/application/controllers/welcome.php on line 93
+[24-Nov-2017 16:21:43 Asia/Calcutta] PHP Fatal error:  Cannot use object of type CI_DB_mysqli_result as array in /home/compadd/public_html/projects/salonline/application/views/front/index.php on line 868
+[15-May-2019 14:42:42 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ']' in /home/ghargharbazaar/public_html/api/application/controllers/welcome.php on line 5975
+[15-May-2019 14:43:06 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ']' in /home/ghargharbazaar/public_html/api/application/controllers/welcome.php on line 5971
+[15-May-2019 14:46:06 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ']' in /home/ghargharbazaar/public_html/api/application/controllers/welcome.php on line 5974
+[18-May-2019 16:58:19 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ''prod_cart_qty_att'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/ghargharbazaar/public_html/api/application/controllers/welcome.php on line 7451
+[18-May-2019 16:58:28 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ''prod_cart_qty_att'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/ghargharbazaar/public_html/api/application/controllers/welcome.php on line 7451
